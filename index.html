@@ -1,0 +1,172 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b16">
+  <meta name="description" content="AetherCode Digital Solutions builds modern websites, mobile apps and custom software.">
+  <title>AetherCode Digital Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">AETHER<span>CODE</span><small>DIGITAL SOLUTIONS</small></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    <nav id="mainNav">
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+      <a href="dashboard.html" id="dashboardLink" hidden>Dashboard</a>
+      <a href="admin.html" id="adminLink" hidden>Owner Panel</a>
+      <a class="button button-small" href="login.html" id="loginLink">Get Started ↗</a>
+      <button class="button button-small" id="logoutButton" hidden>Log out</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-content">
+        <span class="eyebrow"><span class="status-dot"></span> DIGITAL INNOVATION STUDIO</span>
+        <h1>We Engineer<br>the <span class="gradient-text">Digital Future.</span></h1>
+        <p>We turn ambitious ideas into high-performance websites, mobile applications and intelligent digital solutions.</p>
+        <div class="hero-actions">
+          <a class="button" href="login.html">Start a Project ↗</a>
+          <a class="button button-ghost" href="#portfolio">Explore Our Work</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>Web</strong><span>Development</span></div>
+          <div><strong>App</strong><span>Development</span></div>
+          <div><strong>Custom</strong><span>Software</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="visual-card glass">
+          <span class="eyebrow">YOUR NEXT BIG IDEA</span>
+          <div class="code-art">
+            <span>const</span> future = <span>build</span>({<br>
+            &nbsp; innovation: <b>true</b>,<br>
+            &nbsp; performance: <b>100</b>,<br>
+            &nbsp; possibilities: <b>"∞"</b><br>
+            });
+          </div>
+          <div class="visual-footer"><span class="status-dot"></span> Ready to create something great</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="services">
+      <div class="section-heading">
+        <span class="eyebrow">WHAT WE DO</span>
+        <h2>Solutions built for <span class="gradient-text">growth.</span></h2>
+        <p>Technology and design working together to move your business forward.</p>
+      </div>
+      <div class="card-grid" id="servicesGrid">
+        <article class="feature-card">
+          <div class="feature-icon">⌘</div>
+          <h3>Website Development</h3>
+          <p>Responsive business websites, landing pages and custom web platforms.</p>
+          <a href="login.html">Discuss a project ↗</a>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">▣</div>
+          <h3>Mobile Applications</h3>
+          <p>Modern app experiences designed around real user needs.</p>
+          <a href="login.html">Discuss a project ↗</a>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">⌘</div>
+          <h3>E-commerce Solutions</h3>
+          <p>Online stores, product catalogs, order management and dashboards.</p>
+          <a href="login.html">Discuss a project ↗</a>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">◇</div>
+          <h3>Custom Software</h3>
+          <p>Business tools, client portals and tailored workflow applications.</p>
+          <a href="login.html">Discuss a project ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="portfolio">
+      <div class="section-heading">
+        <span class="eyebrow">SELECTED WORK</span>
+        <h2>Built with purpose.</h2>
+        <p>Publish your real projects from the Owner Panel when you're ready.</p>
+      </div>
+      <div class="card-grid" id="portfolioGrid">
+        <article class="feature-card portfolio-card">
+          <span class="portfolio-tag">WEB PLATFORM</span>
+          <h3>Business Workspace</h3>
+          <p>A modern digital workspace concept for business operations.</p>
+        </article>
+        <article class="feature-card portfolio-card">
+          <span class="portfolio-tag">E-COMMERCE</span>
+          <h3>Online Store</h3>
+          <p>A streamlined shopping experience with responsive design.</p>
+        </article>
+        <article class="feature-card portfolio-card">
+          <span class="portfolio-tag">DASHBOARD</span>
+          <h3>Project Control</h3>
+          <p>Project tracking and workflow management interfaces.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="pricing">
+      <div class="section-heading">
+        <span class="eyebrow">FLEXIBLE ENGAGEMENT</span>
+        <h2>Built around your vision.</h2>
+        <p>Final prices depend on the scope, features and delivery requirements.</p>
+      </div>
+      <div class="card-grid">
+        <article class="feature-card price-card">
+          <span class="eyebrow">STARTER</span>
+          <h3>Business Website</h3>
+          <p>Professional online presence for your business.</p>
+          <ul><li>Responsive design</li><li>Core business pages</li><li>Contact form</li></ul>
+          <a class="button button-ghost" href="login.html">Request a Quote</a>
+        </article>
+        <article class="feature-card price-card featured">
+          <span class="eyebrow">GROWTH</span>
+          <h3>E-commerce Store</h3>
+          <p>Shopping experience and order management tailored to you.</p>
+          <ul><li>Product catalog</li><li>Order workflow</li><li>Admin controls</li></ul>
+          <a class="button" href="login.html">Request a Quote</a>
+        </article>
+        <article class="feature-card price-card">
+          <span class="eyebrow">CUSTOM</span>
+          <h3>Software & Apps</h3>
+          <p>Custom functionality designed around your requirements.</p>
+          <ul><li>Requirements planning</li><li>Custom workflows</li><li>Milestone tracking</li></ul>
+          <a class="button button-ghost" href="login.html">Request a Quote</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="contact">
+      <div class="cta-panel">
+        <span class="eyebrow">LET'S BUILD SOMETHING</span>
+        <h2>Your idea deserves <span class="gradient-text">a great execution.</span></h2>
+        <p>Create an account to submit your requirements and manage your project.</p>
+        <a class="button" href="login.html">Start Your Project ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <a class="brand" href="index.html">AETHER<span>CODE</span><small>DIGITAL SOLUTIONS</small></a>
+    <p>Ideas Engineered Into Reality.</p>
+    <p>© <span id="year"></span> AetherCode Digital Solutions</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
