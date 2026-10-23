@@ -1,0 +1,50 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Owner Panel | AetherCode</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">AETHER<span>CODE</span><small>OWNER CONSOLE</small></a>
+    <nav style="display:flex">
+      <a href="dashboard.html">Client Workspace</a>
+      <a href="index.html">Public Website</a>
+      <button class="button button-small" id="logoutButton">Log out</button>
+    </nav>
+  </header>
+
+  <main class="container page-shell">
+    <div class="page-heading">
+      <span class="eyebrow">PRIVATE MANAGEMENT</span>
+      <h1 style="font-size:38px;letter-spacing:-1px">Owner Control Center</h1>
+      <p>Project operations and support queue.</p>
+    </div>
+
+    <div id="adminNotice" class="notice" hidden></div>
+
+    <div class="stat-grid">
+      <div class="stat-card"><span>Total projects</span><strong id="totalProjects">0</strong></div>
+      <div class="stat-card"><span>Submitted</span><strong id="submittedProjects">0</strong></div>
+      <div class="stat-card"><span>In progress</span><strong id="inProgressProjects">0</strong></div>
+      <div class="stat-card"><span>Support tickets</span><strong id="totalTickets">0</strong></div>
+    </div>
+
+    <section class="panel" style="margin-bottom:20px">
+      <h2>Project management</h2>
+      <p class="small-text">Status updates and admin notes are written through the security rules configured for the owner.</p>
+      <div class="table-wrap" id="projectsTable">Loading projects...</div>
+    </section>
+
+    <section class="panel">
+      <h2>Support inbox</h2>
+      <div id="supportTable">Loading tickets...</div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>
