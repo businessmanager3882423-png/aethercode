@@ -1,0 +1,105 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Client Dashboard | AetherCode</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">AETHER<span>CODE</span><small>CLIENT WORKSPACE</small></a>
+    <nav style="display:flex">
+      <a href="index.html">Website</a>
+      <a href="admin.html" id="ownerLink" hidden>Owner Panel</a>
+      <button class="button button-small" id="logoutButton">Log out</button>
+    </nav>
+  </header>
+
+  <main class="container page-shell">
+    <div class="page-heading">
+      <span class="eyebrow">YOUR WORKSPACE</span>
+      <h1 style="font-size:38px;letter-spacing:-1px">Client Dashboard</h1>
+      <p id="welcomeText">Loading your account...</p>
+    </div>
+
+    <div id="pageNotice" class="notice" hidden></div>
+
+    <div class="stat-grid">
+      <div class="stat-card"><span>My projects</span><strong id="projectCount">0</strong></div>
+      <div class="stat-card"><span>In progress</span><strong id="activeCount">0</strong></div>
+      <div class="stat-card"><span>Completed</span><strong id="completedCount">0</strong></div>
+      <div class="stat-card"><span>Account</span><strong style="font-size:18px" id="accountStatus">Active</strong></div>
+    </div>
+
+    <div class="panel-grid">
+      <section class="panel">
+        <h2>Request a project</h2>
+        <form id="projectForm" class="stack">
+          <div class="field">
+            <label for="projectTitle">Project title</label>
+            <input id="projectTitle" required maxlength="120" placeholder="E-commerce website">
+          </div>
+          <div class="field">
+            <label for="serviceType">Service</label>
+            <select id="serviceType" required>
+              <option value="Website Development">Website Development</option>
+              <option value="Mobile App">Mobile App</option>
+              <option value="E-commerce">E-commerce</option>
+              <option value="Custom Software">Custom Software</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="budget">Estimated budget</label>
+            <select id="budget">
+              <option value="Not decided">Not decided</option>
+              <option value="Under 25000 PKR">Under 25,000 PKR</option>
+              <option value="25000-75000 PKR">25,000–75,000 PKR</option>
+              <option value="75000-200000 PKR">75,000–200,000 PKR</option>
+              <option value="Above 200000 PKR">Above 200,000 PKR</option>
+              <option value="USD quote requested">USD quote requested</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="projectDescription">Project requirements</label>
+            <textarea id="projectDescription" required maxlength="5000" placeholder="Explain your idea and required features..."></textarea>
+          </div>
+          <button class="button" type="submit" id="projectSubmit">Submit project request</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>My projects</h2>
+        <div id="projectsList"><p class="empty-state">Loading projects...</p></div>
+      </section>
+
+      <section class="panel">
+        <h2>Send a support message</h2>
+        <form id="supportForm" class="stack">
+          <div class="field">
+            <label for="supportSubject">Subject</label>
+            <input id="supportSubject" required maxlength="120">
+          </div>
+          <div class="field">
+            <label for="supportMessage">Message</label>
+            <textarea id="supportMessage" required maxlength="4000"></textarea>
+          </div>
+          <button class="button" type="submit">Send message</button>
+        </form>
+        <hr>
+        <h3>My support tickets</h3>
+        <div id="ticketsList"><p class="empty-state">Loading messages...</p></div>
+      </section>
+
+      <section class="panel">
+        <h2>Account information</h2>
+        <div id="profileInfo" class="stack">Loading profile...</div>
+      </section>
+    </div>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script type="module" src="js/client.js"></script>
+</body>
+</html>
