@@ -1,27 +1,53 @@
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+
 import {
   getAuth,
   setPersistence,
   browserLocalPersistence,
   GoogleAuthProvider
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
 import {
   getFirestore
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
+// AetherCode Digital Solutions - Firebase Configuration
 const firebaseConfig = {
-  apiKey: "YOUR_FIREBASE_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  appId: "YOUR_FIREBASE_APP_ID"
+  apiKey: "AIzaSyBYDjp0KifTXzZ_mjX3UD_HGsMQEpx_GEU",
+  authDomain: "aethercode-806a1.firebaseapp.com",
+  projectId: "aethercode-806a1",
+  storageBucket: "aethercode-806a1.firebasestorage.app",
+  messagingSenderId: "934508511481",
+  appId: "1:934508511481:web:561aa27e5ce34e8acca228"
 };
 
-export const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export const db = getFirestore(app);
-export const googleProvider = new GoogleAuthProvider();
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
-export const authPersistenceReady = setPersistence(
+// Firebase Authentication
+const auth = getAuth(app);
+
+// Keep login session persistent across browser restarts
+const authPersistenceReady = setPersistence(
   auth,
   browserLocalPersistence
 );
+
+// Google Sign-In provider
+const googleProvider = new GoogleAuthProvider();
+googleProvider.setCustomParameters({
+  prompt: "select_account"
+});
+
+// Firestore Database
+const db = getFirestore(app);
+
+// Export Firebase services for other JS files
+export {
+  app,
+  auth,
+  db,
+  googleProvider,
+  authPersistenceReady
+};
